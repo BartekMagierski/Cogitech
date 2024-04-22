@@ -1,0 +1,44 @@
+{% extends '/forms/boxTemplate.html.twig' %}
+
+{% block form %}
+{{ form_start(form) }}
+		<h1 class="h3 mb-4 font-weight-normal">Add account</h1>
+		<div class="grid gap-3" style="display:grid">
+			<!-- Form fields -->
+			{% for child in form %}
+				{% set fieldType = getFieldType(child.vars.attr) %}
+				{% if fieldType == 'submit' %}
+
+					{{ 
+						form_row(child, {
+							'row_attr': {'class': 'text-end'},
+						})
+					}}
+
+				{% else %}
+
+					{{ 
+						form_row(child, {
+							'row_attr': {'class': 'row d-flex justify-content-between'},
+							'label_attr': {'class': 'col-3'}
+						})
+					}}
+
+				{% endif %}
+			{% endfor %}
+		</div>
+
+{{ form_end(form) }}
+
+{% endblock %}
+
+{% block form_message %}
+	{% if message != null %}
+		<div class="alert {{colorClass(message.state)}} auto-close mt-4">{{message.txt}}</div>
+	{% endif %}
+{% endblock %}
+
+
+
+
+

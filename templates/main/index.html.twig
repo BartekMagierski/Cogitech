@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h3>Task</h3>
+      <ol>
+        <li>
+          <p>Written with Symfony<p>
+        </li>
+        <li>
+          <p>The application uses a console command to download posts from the REST API https://jsonplaceholder.typicode.com and saves them to the database along with the author's name and surname (downloaded in relation to users)</p>
+        </li>
+        <li>
+          <p>The application on the /list subpage displays a list of downloaded posts with the option of deleting them from the local database. The subpage is available after logging in - using the built-in authorization modules.</p>
+        </li>
+        <li>
+          <p>With the help of the platform API, the application provides the /posts suffix with the GET method to retrieve posts from the local database.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h3>Info</h3>
+      <p>Adding a new user on the <b>/addAccount</b> subpage</p>
+      <p>Displaying posts (after logging in) on the <b>/list</b> subpage</p>
+      <p>Database dump on the <b>/posts</b> subpage</p>
+    <div>
+  </div>
+</div>
+
+{% endblock %}

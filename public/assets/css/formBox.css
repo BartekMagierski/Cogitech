@@ -1,0 +1,16 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+.box {
+  width: 350px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: content-box;
+}
+.msg {
+  position: absolute;
+  left: 0;
+}

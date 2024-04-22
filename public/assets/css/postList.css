@@ -1,0 +1,33 @@
+.main-wrapper{
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+
+.tablewrapper {
+  width: 800px;
+  min-height: 600px;
+}
+.table > caption{
+  caption-side: top;
+}
+.table tr {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.table td p{
+  margin: unset;
+}
+.table .creator {
+  width: 15rem;
+}
+.table .titleRow {
+  width: 30rem;
+  text-align: left;
+}
+
+#pagination > li > a{
+  transition-duration: .3s;
+}

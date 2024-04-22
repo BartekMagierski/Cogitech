@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+
+    <link rel="stylesheet" href="/assets/css/formBox.css">
+
+{% endblock %}
+
+{% block javascripts %}
+
+    <script type="text/javascript" src="/assets/js/autoClosePopup.js" ></script>
+    <script type="text/javascript" src="/assets/js/formbox.js" defer></script>
+
+{% endblock %}
+
+
+{% block body %}
+<div class="wrapper bg-dark">
+    <div class="box">
+
+      <!-- Form -->
+      <div class="text-white bg-secondary p-4 border border-light-subtle rounded">
+        {% block form %}{% endblock %}
+      <div>
+
+      <!-- Action responds -->
+      <div class="msg mt-4 container">
+        {% block form_message %}{% endblock %}
+      </div>
+
+  <div>
+</div>
+{% endblock %}
